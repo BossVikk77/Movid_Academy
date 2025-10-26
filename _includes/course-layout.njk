@@ -1,0 +1,53 @@
+---
+layout: base-layout.njk
+---
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <h1 class="display-4 text-primary fw-bold mb-3 d-flex align-items-center">
+        <img src="{{ course.logoUrl }}" 
+             alt="{{ course.title }} Logo"
+             width="50" 
+             height="50"
+             class="me-3"
+             onerror="this.src='https://placehold.co/50x50'; this.onerror=null;">
+        {{ title }}
+      </h1>
+      <div class="lead">
+        {{ content | safe }}
+      </div>
+
+      <hr class="my-4">
+
+      <h2 class="text-primary fw-bold mb-3"><i class="bi bi-list-check me-2"></i>Curriculum Outline</h2>
+      <ul class="list-group list-group-flush mb-4">
+        {% for item in course.curriculum %}
+          <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="sticky-top" style="top: 8rem;">
+        <h3 class="text-primary fw-bold mb-3"><i class="bi bi-cash-coin me-2"></i>Pricing Tiers</h3>
+        {% for tier in course.pricingTiers %}
+          <div class="card mb-3 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">{{ tier.name }}</h4>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title pricing-card-title">{{ tier.price }}</h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                {% for feature in tier.features %}
+                  <li>{{ feature }}</li>
+                {% endfor %}
+              </ul>
+              <a href="/contact/" class="w-100 btn btn-lg btn-accent">Enroll Now</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

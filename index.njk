@@ -1,0 +1,124 @@
+---
+layout: base-layout.njk
+title: Home
+permalink: /
+---
+
+<section class="hero-section text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 mb-3">Achieve Your Highest Score</h1>
+        <p class="lead mb-4">Don't just study—prepare to succeed. We find your unique path to a top score with personalized strategies and expert guidance.</p>
+        <a href="/pricing/" class="btn btn-accent btn-lg me-2">Explore Courses</a>
+        <a href="/contact/" class="btn btn-outline-light btn-lg">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="course-glimpse-section bg-light py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-4">Explore Our Programs</h2>
+    
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-7 g-3 justify-content-center">
+      
+      {% for course in courses %}
+      <div class="col text-center">
+        <a href="/courses/{{ course.slug }}/" class="course-grid-item">
+          <img src="{{ course.logoUrl }}" 
+               alt="{{ course.title }} logo" 
+               class="course-grid-logo"
+               onerror="this.src='https://placehold.co/50x50'; this.onerror=null;">
+          <span class="course-grid-title">{{ course.title }}</span>
+        </a>
+      </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</section>
+
+<section class="container my-5 py-5">
+  <h2 class="text-center text-primary fw-bold mb-5">Why Movid Academy?</h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body p-4">
+        <i class="bi bi-mortarboard fs-1 text-accent mb-3"></i>
+          <h3 class="text-primary h4">Expert Tutors</h3>
+          <p>Learn from 99th-percentile scorers and certified educators who are specialists in their respective tests.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body p-4">
+        <i class="bi bi-person-check fs-1 text-accent mb-3"></i>
+          <h3 class="text-primary h4">Personalized Plans</h3>
+          <p>We analyze your weaknesses and build a custom study plan that targets the areas where you need the most improvement.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body p-4">
+        <i class="bi bi-graph-up-arrow fs-1 text-accent mb-3"></i>
+          <h3 class="text-primary h4">Proven Results</h3>
+          <p>Our students see significant score increases and gain admission to their top-choice schools worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-secondary py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5"><i class="bi bi-chat-quote me-3"></i>What Our Students Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% for testimonial in testimonials %}
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <blockquote class="blockquote">
+                <p class="fs-4 mb-3">"{{ testimonial.quote }}"</p>
+                <footer class="blockquote-footer">{{ testimonial.name }}, <cite title="Source Title">{{ testimonial.course }}</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5 py-5">
+  <h2 class="text-center text-primary fw-bold mb-5"><i class="bi bi-people-fill me-3"></i>Meet Our Tutors</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4 text-center">
+      <img src="https://placehold.co/200x200/225740/F5EFE6?text=Tutor" class="img-fluid rounded-circle mb-3" alt="Tutor 1" onerror="this.src='https://placehold.co/200x200';">
+      <h5 class="fw-bold">Dr. Funke Adebayo</h5>
+      <p class="text-muted">Head Tutor, GRE & GMAT</p>
+    </div>
+    <div class="col-md-4 mb-4 text-center">
+      <img src="https://placehold.co/200x200/E87722/F5EFE6?text=Tutor" class="img-fluid rounded-circle mb-3" alt="Tutor 2" onerror="this.src='https://placehold.co/200x200';">
+      <h5 class="fw-bold">David Chen</h5>
+      <p class="text-muted">Lead Instructor, SAT & IELTS</p>
+    </div>
+    <div class="col-md-4 mb-4 text-center">
+      <img src="https://placehold.co/200x200/3D3D3D/F5EFE6?text=Tutor" class="img-fluid rounded-circle mb-3" alt="Tutor 3" onerror="this.src='https://placehold.co/200x200';">
+      <h5 class="fw-bold">Chinedu Okonkwo</h5>
+      <p class="text-muted">Coordinator, WAEC, NECO & JAMB</p>
+    </div>
+  </div>
+</section>

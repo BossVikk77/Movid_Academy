@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1194.5 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Bauhaus93, 'Bauhaus 93';
+        font-size: 350px;
+      }
+
+      .cls-2 {
+        fill: #7a32a0;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: BellavoirSerifPERSONALUSE-Regular, 'Bellavoir Serif PERSONAL USE';
+        font-size: 272.84px;
+        stroke: #2f8c93;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-4 {
+        fill: #2f8c93;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #5d1c7f;
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="184.5" y="-6.42" width="406.08" height="612.96" filterUnits="userSpaceOnUse">
+      <feOffset dx="-33" dy="58"/>
+      <feGaussianBlur result="blur" stdDeviation="23"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <path class="cls-4" d="M1141.11,662.75h-267.24l-105.07-186.81-128.54-228.55c-3.15-5.6-3.15-12.45,0-18.05L768.8.78l133.62,237.58,238.69,424.38Z"/>
+    <polygon class="cls-2" points="420.2 476.4 414.87 485.88 315.13 663.2 47.89 663.2 281.25 248.3 286.58 238.82 420.04 476.12 420.2 476.4"/>
+    <polygon class="cls-6" points="554.51 243.41 420.04 479.48 286.58 242.18 414.87 14.08 420.2 4.6 553.82 242.18 554.51 243.41"/>
+    <polygon class="cls-5" points="792.5 663.2 525.26 663.2 460.88 548.73 420.2 476.4 286.58 238.82 414.87 10.72 420.2 1.24 553.82 238.82 594.5 311.16 728.12 548.73 792.5 663.2"/>
+  </g>
+  <text class="cls-1" transform="translate(11.73 910.17) scale(1.06 1)"><tspan x="0" y="0">MOVID</tspan></text>
+  <text class="cls-3" transform="translate(109.06 1058.57) rotate(-3.39) scale(1.06 1) skewX(-3.58)"><tspan class="cls-7" x="0" y="0">A</tspan><tspan x="144.88" y="0">cademy</tspan></text>
+</svg>

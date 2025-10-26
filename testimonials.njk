@@ -1,0 +1,84 @@
+---
+layout: base-layout.njk
+title: Testimonials
+permalink: /testimonials/
+---
+
+<div class="container my-5">
+  <h1 class="display-4 text-primary fw-bold mb-4 text-center"><i class="bi bi-chat-quote-fill me-3"></i>What Our Students Say</h1>
+  <p class="lead text-center mb-5">We're proud of our students' success. Read their stories.</p>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for testimonial in testimonials %}
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>"{{ testimonial.quote }}"</p>
+            <footer class="blockquote-footer">{{ testimonial.name }}, <cite title="Source Title">{{ testimonial.course }}</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <hr class="my-5">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h2 class="text-primary fw-bold mb-3 text-center">Share Your Story</h2>
+      <p class="text-center mb-4">Completed a course with us? We'd love to hear about your experience!</p>
+      
+      <form class="needs-validation" action="https://formspree.io/f/myzbybvv" method="POST" novalidate>
+        
+        <div class="mb-3">
+          <label for="testimonialName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="testimonialName" name="name" required>
+          <div class="invalid-feedback">
+            Please enter your name.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="testimonialCourse" class="form-label">Course Taken</label>
+          <select class="form-select" id="testimonialCourse" name="course" required>
+            <option value="" selected disabled>Select a course...</option>
+            {% for course in courses %}
+            <option value="{{ course.title }}">{{ course.title }}</option>
+            {% endfor %}
+          </select>
+          <div class="invalid-feedback">
+            Please select the course you took.
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="testimonialQuote" class="form-label">Your Testimonial</label>
+          <textarea class="form-control" id="testimonialQuote" name="quote" rows="5" required></textarea>
+          <div class="invalid-feedback">
+            Please share your experience.
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-lg">Submit Testimonial</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>

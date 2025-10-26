@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "sat",
+    "title": "SAT Test Prep",
+    "logoUrl": "/public/images/SAT_logo.svg",
+    "briefDescription": "Comprehensive preparation for all sections of the SAT.",
+    "markdownFile": "sat.md",
+    "curriculum": ["Evidence-Based Reading", "Writing and Language", "Math (No Calculator)", "Math (Calculator)", "Essay (Optional)"],
+    "pricingTiers": [
+      { "name": "Self-Paced", "price": "$199", "features": ["Full access to video library", "1,000+ practice questions", "2 full-length practice tests"] },
+      { "name": "Group Class", "price": "$499", "features": ["12-week live online class", "All Self-Paced features", "Personalized homework"] },
+      { "name": "Private Tutoring", "price": "$1299", "features": ["20 hours of 1-on-1 tutoring", "All Group Class features", "Custom study plan"] }
+    ]
+  },
+  {
+    "slug": "gmat",
+    "title": "GMAT Focus Prep",
+    "logoUrl": "/public/images/GMAT_Logo.svg",
+    "briefDescription": "Master the GMAT Focus Edition for business school.",
+    "markdownFile": "gmat.md",
+    "curriculum": ["Quantitative Reasoning", "Verbal Reasoning", "Data Insights", "Official Practice Exams"],
+    "pricingTiers": [
+      { "name": "Data Insights Only", "price": "$149", "features": ["Targeted Data Insights prep", "500+ DI questions", "3 DI-specific practice tests"] },
+      { "name": "Full Prep", "price": "$599", "features": ["Complete GMAT Focus prep", "2,000+ practice questions", "5 full-length adaptive tests"] }
+    ]
+  },
+  {
+    "slug": "gre",
+    "title": "GRE General Test Prep",
+    "logoUrl": "/public/images/GRE_logo.svg",
+    "briefDescription": "Achieve your target score for graduate school.",
+    "markdownFile": "gre.md",
+    "curriculum": ["Analytical Writing", "Verbal Reasoning (TC & RC)", "Quantitative Reasoning", "Full-Length Mock Tests"],
+    "pricingTiers": [
+      { "name": "Self-Paced", "price": "$249", "features": ["Full access to video library", "1,500+ practice questions", "4 full-length practice tests"] },
+      { "name": "Private Tutoring", "price": "$1499", "features": ["25 hours of 1-on-1 tutoring", "Custom study plan", "Personalized feedback"] }
+    ]
+  },
+  {
+    "slug": "ielts",
+    "title": "IELTS Academic Prep",
+    "logoUrl": "/public/images/IELTS_logo.svg",
+    "briefDescription": "Excel in the IELTS for university admissions.",
+    "markdownFile": "ielts.md",
+    "curriculum": ["Listening", "Reading", "Writing (Task 1 & 2)", "Speaking (Mock Interviews)"],
+    "pricingTiers": [
+      { "name": "Writing Focus", "price": "$199", "features": ["In-depth Writing Task 1 & 2", "10 essay corrections", "Live strategy sessions"] },
+      { "name": "Full Prep", "price": "$499", "features": ["Complete 4-module prep", "All Speaking/Writing practice", "6 full-length mock tests"] }
+    ]
+  },
+  {
+    "slug": "waec",
+    "title": "WAEC / WASSCE Prep",
+    "logoUrl": "/public/images/WAEC_Logo.svg",
+    "briefDescription": "Prepare for your West African Senior School Certificate Examination.",
+    "markdownFile": "waec.md",
+    "curriculum": ["Mathematics", "English Language", "Core Sciences (Physics, Chem, Bio)", "Key Electives Review"],
+    "pricingTiers": [
+      { "name": "Full Access", "price": "₦25,000", "features": ["Video lessons for 9 subjects", "Past questions (10+ years)", "CBT practice portal"] },
+      { "name": "Science Focus", "price": "₦15,000", "features": ["Maths, English, & 3 Sciences", "Science-specific past questions", "Live practicals review"] }
+    ]
+  },
+  {
+    "slug": "neco",
+    "title": "NECO Prep",
+    "logoUrl": "/public/images/NECO_Logo.svg",
+    "briefDescription": "Dedicated preparation for the National Examinations Council (NECO).",
+    "markdownFile": "neco.md",
+    "curriculum": ["Mathematics", "English Language", "Core Subjects Review", "Common practicals review"],
+    "pricingTiers": [
+      { "name": "Full Access", "price": "₦25,000", "features": ["Video lessons for 9 subjects", "Past questions (10+ years)", "CBT practice portal"] }
+    ]
+  },
+  {
+    "slug": "jamb",
+    "title": "JAMB UTME Prep",
+    "logoUrl": "/public/images/JAMB_logo.svg",
+    "briefDescription": "Score high on your UTME with our intensive prep course.",
+    "markdownFile": "jamb.md",
+    "curriculum": ["Use of English", "Subject 1 (e.g., Maths)", "Subject 2 (e.g., Physics)", "Subject 3 (e.g., Chemistry)", "CBT Strategy"],
+    "pricingTiers": [
+      { "name": "CBT Practice", "price": "₦10,000", "features": ["Access to CBT portal", "5,000+ past questions", "20 timed mock exams"] },
+      { "name": "Full Prep Class", "price": "₦30,000", "features": ["All CBT features", "Live online classes (4 subjects)", "Dedicated success advisor"] }
+    ]
+  }
+]

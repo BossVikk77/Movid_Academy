@@ -1,0 +1,21 @@
+{
+  "name": "movid-academy",
+  "version": "1.0.0",
+  "description": "Static website for Movid Academy test prep.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "static",
+    "bootstrap",
+    "github-pages"
+  ],
+  "author": "Moyinoluwa Olayinka",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
