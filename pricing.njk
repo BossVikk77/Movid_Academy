@@ -11,7 +11,7 @@ permalink: /pricing/
   {% for course in courses %}
   <section class="mb-5">
     <h2 class="text-primary fw-bold border-bottom pb-2 mb-4 d-flex align-items-center">
-      <img src="{{ course.logoUrl }}" 
+      <img src="{{ course.logoUrl | url }}" 
            alt="{{ course.title }} Logo"
            width="32" 
            height="32"
@@ -23,7 +23,7 @@ permalink: /pricing/
     
     <div class="row row-cols-1 row-cols-md-{{ course.pricingTiers.length | min(3) }} g-4">
       {% for tier in course.pricingTiers %}
-      <div class="col">
+      <div classs="col">
         <div class="card h-100 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">{{ tier.name }}</h4>
@@ -35,8 +35,8 @@ permalink: /pricing/
                 <li>{{ feature }}</li>
               {% endfor %}
             </ul>
-            <a href="/courses/{{ course.slug }}/" class="btn btn-outline-primary mb-2">Learn More</a>
-            <a href="/contact/" class="btn btn-accent">Enroll Now</a>
+            <a href="{{ '/courses/' + course.slug + '/' | url }}" class="btn btn-outline-primary mb-2">Learn More</a>
+            <a href="{{ '/contact/' | url }}" class="btn btn-accent">Enroll Now</a>
           </div>
         </div>
       </div>

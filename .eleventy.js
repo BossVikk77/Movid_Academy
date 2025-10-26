@@ -1,3 +1,5 @@
+const metadata = require('./_data/metadata.json');
+
 module.exports = function(eleventyConfig) {
 
   // Passthrough copy for static assets in the 'public' directory
@@ -6,14 +8,16 @@ module.exports = function(eleventyConfig) {
   // Shortcode to get the current year for the footer
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // Add a 'min' filter to Nunjucks (from previous fix)
+  // Add a 'min' filter to Nunjucks
   eleventyConfig.addNunjucksFilter("min", function(a, b) {
     return Math.min(a, b);
   });
 
-  // *** THIS IS THE FIX FOR THE MARKDOWN ERROR ***
   // Set the markdown-it library instance
   eleventyConfig.setLibrary("md", require("markdown-it")());
+
+  // Check if we are in 'production' or 'development'
+  const isProduction = process.env.NODE_ENV === 'production';
 
   return {
     // Set the input directory to the root
@@ -25,9 +29,14 @@ module.exports = function(eleventyConfig) {
     },
     // Specify template formats
     templateFormats: ["njk", "md"],
-    // Use Nunjucks for markdown files (so they can process data)
+    // Use Nunjucks for markdown files
     markdownTemplateEngine: "njk",
     // Use Nunjucks for HTML files
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    
+    // Conditionally set the path prefix
+    // Uses the prefix for production (GitHub)
+    // Uses "/" for development (local)
+    pathPrefix: isProduction ? metadata.pathPrefix : "/"
   };
 };

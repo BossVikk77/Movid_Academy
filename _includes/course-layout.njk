@@ -6,7 +6,7 @@ layout: base-layout.njk
   <div class="row">
     <div class="col-lg-8">
       <h1 class="display-4 text-primary fw-bold mb-3 d-flex align-items-center">
-        <img src="{{ course.logoUrl }}" 
+        <img src="{{ course.logoUrl | url }}" 
              alt="{{ course.title }} Logo"
              width="50" 
              height="50"
@@ -43,7 +43,7 @@ layout: base-layout.njk
                   <li>{{ feature }}</li>
                 {% endfor %}
               </ul>
-              <a href="/contact/" class="w-100 btn btn-lg btn-accent">Enroll Now</a>
+              <a href="{{ '/contact/' | url }}" class="w-100 btn btn-lg btn-accent">Enroll Now</a>
             </div>
           </div>
         {% endfor %}

@@ -11,44 +11,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{ '/public/custom.css' | url }}">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <link rel="stylesheet" href="/public/custom.css">
-
 </head>
 <body class="d-flex flex-column min-vh-100">
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center my-0 py-0" href="/">
-    <img src="/public/images/logo2.svg" 
-         alt="Movid Academy Logo" 
-         width="50" 
-         height="50" 
-         class="d-inline-block align-text-top me-2"
-         onerror="this.src='https.placehold.co/30x30';">
-    Movid Academy   
-  </a>
+      <a class="navbar-brand d-flex align-items-center my-0 py-0" href="{{ '/' | url }}">
+        <img src="{{ '/public/images/logo2.svg' | url }}" 
+             alt="Movid Academy Logo" 
+             width="50" 
+             height="50" 
+             class="d-inline-block align-text-top me-2"
+             onerror="this.src='https://placehold.co/30x30';">
+        Movid Academy
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | url }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/">About Us</a>
+            <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about/' | url }}">About Us</a>
           </li>
-<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle {% if page.url.startsWith('/courses/') %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Courses
             </a>
             <ul class="dropdown-menu">
               {% for course in courses %}
               <li>
-                <a class="dropdown-item d-flex align-items-center {% if page.url == '/courses/' + course.slug + '/' %}active{% endif %}" href="/courses/{{ course.slug }}/">
-                  <img src="{{ course.logoUrl }}" 
+                <a class="dropdown-item d-flex align-items-center {% if page.url == '/courses/' + course.slug + '/' %}active{% endif %}" href="{{ '/courses/' + course.slug + '/' | url }}">
+                  <img src="{{ course.logoUrl | url }}" 
                        alt="{{ course.title }} Logo" 
                        width="24" 
                        height="24" 
@@ -61,17 +61,17 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.url == '/pricing/' %}active{% endif %}" href="/pricing/">Pricing</a>
+            <a class="nav-link {% if page.url == '/pricing/' %}active{% endif %}" href="{{ '/pricing/' | url }}">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.url == '/faq/' %}active{% endif %}" href="/faq/">FAQ</a>
+            <a class="nav-link {% if page.url == '/faq/' %}active{% endif %}" href="{{ '/faq/' | url }}">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.url == '/testimonials/' %}active{% endif %}" href="/testimonials/">Testimonials</a>
+            <a class="nav-link {% if page.url == '/testimonials/' %}active{% endif %}" href="{{ '/testimonials/' | url }}">Testimonials</a>
           </li>
         </ul>
         {% if page.url != '/contact/' %}
-          <a href="/contact/" class="btn btn-outline-accent">Contact Us</a>
+          <a href="{{ '/contact/' | url }}" class="btn btn-outline-accent">Contact Us</a>
         {% endif %}
       </div>
     </div>
@@ -104,12 +104,10 @@
         <div class="col-md-3">
           <h5>Follow Us</h5>
           <div class="fs-4 social-icons">
-            <div class="fs-4 social-icons">
             <a href="https://x.com/MovidNigeria" class="me-3" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
             <a href="https://web.facebook.com/movid27" class="me-3" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/movid_27/" class="me-3" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.tiktok.com/@movid_academy" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-          </div>
           </div>
         </div>
       </div>
@@ -117,6 +115,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
 </body>
 </html>
